@@ -24,6 +24,10 @@ Install axios, anlibrary that allows you to make http requests. You could also u
 npm i axios
 ```
 
+Install vue-router from the command line or dashboard. 
+** WARNING: When vue-router is installed it overwrites the App.vue file so you would normally install it first.
+
+
 Use JSON Placeholder which provides a fake REST api.
 [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com)
 
