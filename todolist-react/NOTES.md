@@ -4,9 +4,24 @@ npx create-react-app .
 ```
 In VSCode install the ES7 React/Redux/GraphQL/React-Native snippets plugin.
 
-Install uuid for this project. It generate unique ids.
+Install uuid, a library that generates unique ids.
 ```
 npm install uuid
+```
+
+You need to install the router separately.
+```
+npm i react-router-dom
+```
+
+Install axios, anlibrary that allows you to make http requests.
+```
+npm i axios
+```
+
+To start the server.
+```
+npm start
 ```
 
 For jsx you can't use the "class" attribute so use "className" instead.
@@ -109,3 +124,43 @@ For multiple form fields instead of creating an onChange field for every field y
 ```
 onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 ```
+
+If you don't want to return a <div> or and HTML element you can return a React fragment which doesn't get rendered in the DOM.
+```
+import React from 'react';
+
+function About() {
+    return (
+        <React.Fragment>
+            
+        </React.Fragment>
+    )
+};
+
+export default About
+```
+
+If you want to use a router you have to wrap everything that is returned in the render method inside the <Router> tag.
+```
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <div className="container">
+            <Header />
+            <AddTodo addTodo={this.addTodo} />
+            <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo} />
+          </div>
+        </div>
+      </Router>
+    );
+  }
+```
+
+To make initial requests use the componentDidMount method which runs right after the component routes.
+
+To deploy the build run the command.
+```
+npm run build
+```
+This will put all of your static files in a directory named **/build**.
