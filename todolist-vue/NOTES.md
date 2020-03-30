@@ -48,4 +48,4 @@ npm run serve
 # Build for production
 npm run build
 ```
-
+This will put the static files in a directory named **/dist**.
